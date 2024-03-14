@@ -1,0 +1,55 @@
+:root {
+  --clr-light-bg: hsl(240, 78%, 98%);
+  --clr-light-text: hsl(234, 14%, 74%);
+  --clr-med-text: hsl(233, 13%, 49%);
+  --clr-dark-text: hsl(232, 13%, 33%);
+
+  --clr-gradient-1: hsl(236, 72%, 79%);
+  --clr-gradient-2: hsl(237, 63%, 64%);
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+  margin: 0;
+}
+
+html {
+  box-sizing: border-box;
+
+  /* font */
+  font-family: "Montserrat", sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+body {
+  min-height: 100vh;
+  min-height: 100svh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#root {
+  min-height: 100vh;
+  min-height: 100svh;
+  width: 100%;
+
+  background: 
+              url("./assets/images/bg-top.svg") no-repeat top right,
+              url("./assets/images/bg-bottom.svg") no-repeat bottom left,
+              linear-gradient(var(--clr-light-bg), var(--clr-light-bg))
+  ;
+  background-size: 
+              40% auto,
+              40% auto,
+              100% 100%
+  ;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+}
