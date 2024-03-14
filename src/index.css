@@ -35,6 +35,7 @@ body {
   min-height: 100vh;
   min-height: 100svh;
   width: 100%;
+  padding: 3rem 1rem;
 
   background: 
               url("./assets/images/bg-top.svg") no-repeat top right,

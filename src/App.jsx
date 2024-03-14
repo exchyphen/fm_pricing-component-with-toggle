@@ -16,7 +16,7 @@ function App() {
     },
     {
       title: "Professional",
-      annual: "249.99",
+      annual: "$249.99",
       monthly: "$24.99",
       storage: "1 TB Storage",
       users: "5 Users Allowed",
@@ -39,33 +39,36 @@ function App() {
         <div
           key={`pricingItem${index}`}
           className={
-            "pricing__item" + (index % 2 === 1 ? " pricing__item--dark" : "")
+            `pricing__item pricing__item--${index}` +
+            (index % 2 === 1 ? " pricing__item--dark" : "")
           }
         >
           <h2
             className={
-              "pricing__title" + (index % 2 === 1 ? "pricing__text--dark" : "")
+              "pricing__title" + (index % 2 === 1 ? " pricing__text--dark" : "")
             }
           >
             {data.title}
           </h2>
           <p
             className={
-              "pricing__price" + (index % 2 === 1 ? "pricing__text--dark" : "")
+              "pricing__price" + (index % 2 === 1 ? " pricing__text--dark" : "")
             }
           >
             {toggleState ? data.annual : data.monthly}
           </p>
-          <p className={index % 2 === 1 ? "pricing__text--dark" : ""}>
+          <p className={index % 2 === 1 ? " pricing__text--dark" : ""}>
             {data.storage}
           </p>
-          <p className={index % 2 === 1 ? "pricing__text--dark" : ""}>
+          <p className={index % 2 === 1 ? " pricing__text--dark" : ""}>
             {data.users}
           </p>
-          <p className={index % 2 === 1 ? "pricing__text--dark" : ""}>
-            {data.storage}
+          <p className={index % 2 === 1 ? " pricing__text--dark" : ""}>
+            {data.send}
           </p>
-          <button>learn more</button>
+          <button className={index % 2 === 1 ? " pricing__button--light" : ""}>
+            learn more
+          </button>
         </div>
       );
     });
